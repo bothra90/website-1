@@ -137,13 +137,13 @@ class Index extends React.Component {
             <MarkdownBlock>{
 bash`git clone https://github.com/libra/libra.git && cd libra`}</MarkdownBlock>
           </div>
-          <h4>2. Install Dependencies:</h4>
+          <h4>2. Build client Docker image (needs docker):</h4>
           <div style={{marginLeft:"30px"}}>
-            <MarkdownBlock>{bash`./scripts/dev_setup.sh`}</MarkdownBlock>
+            <MarkdownBlock>{bash`./docker/client/build.sh`}</MarkdownBlock>
           </div>
             <h4>3. Run the CLI:</h4>
           <div style={{marginLeft:"30px"}}>
-            <MarkdownBlock>{bash`./scripts/cli/start_cli_testnet.sh`}</MarkdownBlock>
+            <MarkdownBlock>{bash`docker run -it libra_client:latest`}</MarkdownBlock>
           </div>
             <h4>4. Run Your First Transaction:</h4>
           <div style={{marginLeft:"30px"}}>
